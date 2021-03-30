@@ -19,7 +19,7 @@ jobs:
       - name: Run tests
         run: |
           docker build . --file Dockerfile -t ahmadkhaled1995/jenkins_iti:v2.0
-          docker login -u ${{secrets.USER_NAME_DOCKER}} -p {{secrets.PASSWORD_DOCKER}}
+          docker login -u ${{ secrets.USER_NAME_DOCKER }} -p ${{ secrets.PASSWORD_DOCKER }}
           docker push ahmadkhaled1995/jenkins_iti:v2.0
 
   
